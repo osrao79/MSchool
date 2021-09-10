@@ -1,0 +1,22 @@
+.footer-main {
+  height: 8vh;
+  border-top: 2px solid #cecece;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  .footer-left {
+    
+    padding: 8px;
+    width: 20rem;
+  }
+  .footer-mid {
+    width: 20rem;
+    padding: 8px;
+  }
+  .footer-right {
+    width: 20rem;
+    padding: 8px;
+  }
+}

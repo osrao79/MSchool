@@ -1,0 +1,32 @@
+.navbar-container{
+    width: 100%;
+    height:7vh;
+    border-bottom: 1px solid #cecece;
+    box-shadow: black 10px solid;
+    display: flex;
+    // justify-content: space-around;
+    .logo{
+       flex-basis: 60%; 
+       display: flex;
+       padding-top: 0.5rem;
+       padding-left: 10rem;
+       
+        .logo-text {
+            font-size: 24px;
+            color: #323648;
+            font-family: Avenir, sans-serif;
+            margin: 3px 0px 4px 10px;
+            line-height: normal;
+            font-weight: bold;
+    
+       }
+
+}
+.signup-button{
+        flex-basis: 40%;
+        padding-top : 8px;
+        
+}
+
+
+}
