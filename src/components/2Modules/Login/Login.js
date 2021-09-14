@@ -1,8 +1,17 @@
 import { Button } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import Work from "../../../assets/Work.jpg";
 
 function Login() {
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  function validateEmail(email) {
+    const regexp =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regexp.test(email);
+  }
+  console.log(validateEmail(email));
   return (
     <div className="login-main">
       <div className="login-container">
@@ -26,32 +35,39 @@ function Login() {
             </div>
           </div>
           <div className="login-form-wrapper">
-            <div className="login-form-detail">
+
+            <div className="   ">
               <div className="field-title">Email</div>
               <input
                 className="form-control-edit-field"
                 id="email"
                 type="text"
                 placeholder="Your Email"
-                value=""
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                value={email}
               />
             </div>
-          </div>
 
-          <div className="login-form-detail">
-            <div className="field-title">Password</div>
-            <input
-              className="form-control-edit-field "
-              id="password"
-              type="password"
-              placeholder="Your Password"
-              value=""
-            />
-          </div>
-          <div className="login-form-button">
-            <Button variant="contained" color="primary">
-              Log in
-            </Button>
+            <div className="login-form-detail">
+              <div className="field-title">Password</div>
+              <input
+                className="form-control-edit-field "
+                id="password"
+                type="password"
+                placeholder="Your Password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+              />
+            </div>
+
+            <div className="login-form-button">
+              <Button variant="contained" color="primary">
+                Log in
+              </Button>
+            </div>
+
           </div>
         </div>
 
